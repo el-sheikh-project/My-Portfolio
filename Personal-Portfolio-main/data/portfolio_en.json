@@ -1,0 +1,176 @@
+{
+    "skills": [
+        {
+            "id": "1",
+            "name": "HTML",
+            "percent": 95,
+            "icon": "fa-brands fa-html5"
+        },
+        {
+            "id": "2",
+            "name": "CSS",
+            "percent": 90,
+            "icon": "fa-brands fa-css3-alt"
+        },
+        {
+            "id": "3",
+            "name": "JavaScript",
+            "percent": 85,
+            "icon": "fa-brands fa-js"
+        },
+        {
+            "id": "4",
+            "name": "Tailwind",
+            "percent": 90,
+            "icon": "fa-solid fa-wind"
+        },
+        {
+            "id": "5",
+            "name": "React",
+            "percent": 80,
+            "icon": "fa-brands fa-react"
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "Nutriplan-API-CRUD",
+            "category": "ecommerce",
+            "image": "Personal-Portfolio-main/imgs/nutriplan.png",
+            "link": "https://el-sheikh-project.github.io/nutriplan-API-CRUD-ES6-/",
+            "description": "E-commerce application for healthy products with full CRUD features.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "API"
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Trip-Site Jadoo",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/Trip.png",
+            "link": "https://el-sheikh-project.github.io/Trip-Site-test/",
+            "description": "Travel and tourism landing page with dynamic user experience integration.",
+            "tools": [
+                "HTML",
+                "Bootstrap",
+                "CSS"
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Simple Banking System",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/Bank.png",
+            "link": "https://elsheikh-system.vercel.app/",
+            "description": "Simplified banking system for managing queues and bank accounts.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap",
+                "Telegram API"
+            ]
+        },
+        {
+            "id": "4",
+            "title": "prayerTimes Api",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/prayerTimes.png",
+            "link": "https://el-sheikh-project.github.io/prayerTimes/",
+            "description": "Accurate prayer times application based on user's geographic location.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap",
+                "API"
+            ]
+        },
+        {
+            "id": "5",
+            "title": "GPA Calculator",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/Gpa Calc.png",
+            "link": "https://calc-alpha-five.vercel.app/",
+            "description": "University GPA calculator to help students track their academic performance.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap"
+            ]
+        },
+        {
+            "id": "6",
+            "title": "Student Results Site",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/HICS3.png",
+            "link": "https://el-sheikh-project.github.io/HICS3/",
+            "description": "Simple website to display student results in an organized and easy-to-use way.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap",
+                "JSON"
+            ]
+        },
+        {
+            "id": "7",
+            "title": "Personal Portfolio",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/Portfolio.png",
+            "link": "https://el-sheikh-project.github.io/Portfolio-Task-HTML-CSS/",
+            "description": "My personal portfolio to professionally showcase skills, projects, and experience.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap"
+            ]
+        },
+        {
+            "id": "8",
+            "title": "CRUD-System",
+            "category": "system",
+            "image": "Personal-Portfolio-main/imgs/CRUD-System.png",
+            "link": "https://el-sheikh-project.github.io/CRUD-System-Task-JS/",
+            "description": "CRUD system using JavaScript for easy data management (Create, Read, Update, Delete).",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap"
+            ]
+        },
+        {
+            "id": "9",
+            "title": "Eagle-Car-Website",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/Eagel-Car-Website.png",
+            "link": "https://el-sheikh-project.github.io/Eagel-Car-Website/",
+            "description": "Car dealership website template with modern design.",
+            "tools": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Bootstrap"
+            ]
+        },
+        {
+            "id": "10",
+            "title": "Template 1",
+            "category": "landing",
+            "image": "Personal-Portfolio-main/imgs/task1.png",
+            "link": "https://el-sheikh-project.github.io/Templet-Task-1/",
+            "description": "Simple landing page template using HTML, CSS, and Bootstrap.",
+            "tools": [
+                "HTML",
+                "CSS"
+            ]
+        }
+    ]
+}
