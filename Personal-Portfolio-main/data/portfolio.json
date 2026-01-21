@@ -162,7 +162,7 @@
     },
     {
       "id": "10",
-      "title": "Templaye 1",
+      "title": "Template 1",
       "category": "landing",
       "image": "Personal-Portfolio-main/imgs/task1.png",
       "link": "https://el-sheikh-project.github.io/Templet-Task-1/",
@@ -174,7 +174,7 @@
     },
     {
       "id": "11",
-      "title": "Templaye 2",
+      "title": "Template 2",
       "category": "landing",
       "image": "Personal-Portfolio-main/imgs/superM.png",
       "link": "https://el-sheikh-project.github.io/Templet-Task-2/",
@@ -183,10 +183,9 @@
         "HTML",
         "CSS"
       ]
-    }
-    ,
+    },
     {
-      "id": "11",
+      "id": "12",
       "title": "My Portfolio",
       "category": "landing",
       "image": "Personal-Portfolio-main/imgs/My Portfolio.png",
@@ -200,7 +199,7 @@
         "Font Awesome",
         "JSON",
         "Git",
-        "Tlwind CSS"
+        "Tailwind CSS"
       ]
     }
   ]

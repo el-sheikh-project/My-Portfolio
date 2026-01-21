@@ -281,12 +281,30 @@ const portfolioData = {
       },
       {
         id: "10",
-        title: "Templaye 1",
+        title: "Template 1",
         category: "landing",
         image: "Personal-Portfolio-main/imgs/task1.png",
         link: "https://el-sheikh-project.github.io/Templet-Task-1/",
         description: "قالب بسيط لصفحة هبوط باستخدام HTML و CSS و Bootstrap.",
         tools: ["HTML", "CSS"]
+      },
+      {
+        id: "11",
+        title: "Template 2",
+        category: "landing",
+        image: "Personal-Portfolio-main/imgs/superM.png",
+        link: "https://el-sheikh-project.github.io/Templet-Task-2/",
+        description: "قالب بسيط لصفحة هبوط باستخدام HTML و CSS و Bootstrap.",
+        tools: ["HTML", "CSS"]
+      },
+      {
+        id: "12",
+        title: "My Portfolio",
+        category: "landing",
+        image: "Personal-Portfolio-main/imgs/My Portfolio.png",
+        link: "https://el-sheikh-project.github.io/My-Portfolio/",
+        description: "موقعي التعريفي الشخصي لعرض مهاراتي ومشاريعي وخبراتي.",
+        tools: ["HTML", "CSS", "JS", "Bootstrap", "Font Awesome", "JSON", "Git", "Tailwind CSS"]
       }
     ]
   },
@@ -388,6 +406,24 @@ const portfolioData = {
         link: "https://el-sheikh-project.github.io/Templet-Task-1/",
         description: "Simple landing page template using HTML, CSS, and Bootstrap.",
         tools: ["HTML", "CSS"]
+      },
+      {
+        id: "11",
+        title: "Template 2",
+        category: "landing",
+        image: "Personal-Portfolio-main/imgs/superM.png",
+        link: "https://el-sheikh-project.github.io/Templet-Task-2/",
+        description: "Simple landing page template using HTML, CSS, and Bootstrap.",
+        tools: ["HTML", "CSS"]
+      },
+      {
+        id: "12",
+        title: "My Portfolio",
+        category: "landing",
+        image: "Personal-Portfolio-main/imgs/My Portfolio.png",
+        link: "https://el-sheikh-project.github.io/My-Portfolio/",
+        description: "My personal portfolio website to showcase my skills, projects, and experiences.",
+        tools: ["HTML", "CSS", "JS", "Bootstrap", "Font Awesome", "JSON", "Git", "Tailwind CSS"]
       }
     ]
   }
