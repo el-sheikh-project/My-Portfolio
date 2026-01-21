@@ -553,8 +553,13 @@ function renderProjects(projects = []) {
 
   container.innerHTML = projects.map(project => `
         <div class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700" data-category="${project.category}">
-            <div class="relative h-64 overflow-hidden">
-                <img src="${project.image}" onerror="this.src='https://placehold.co/600x400?text=Project'" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="relative h-64 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                <img src="${project.image}" 
+                     onload="this.classList.remove('opacity-0', 'blur-sm'); this.classList.add('opacity-100', 'blur-0')"
+                     onerror="this.src='https://placehold.co/600x400?text=Project'" 
+                     alt="${project.title}" 
+                     loading="lazy"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 opacity-0 blur-sm">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <a href="${project.link}" target="_blank" class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 bg-primary text-white py-2 px-6 rounded-lg font-bold text-center hover:bg-secondary">
                         <span data-i18n="view_project">${currentLang === 'ar' ? 'معاينة المشروع' : 'View Project'}</span> <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
@@ -715,16 +720,19 @@ function initInteractions() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("opacity-100", "translate-y-0");
-        entry.target.classList.remove("opacity-0", "translate-y-10");
+        // Add a small delay based on index if possible, or just standard fade in
+        entry.target.classList.remove("opacity-0", "translate-y-10", "scale-95");
+        entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  const animateElements = document.querySelectorAll("section > div, .portfolio-item, .testimonial-card");
-  animateElements.forEach(el => {
-    el.classList.add("transition-all", "duration-700", "opacity-0", "translate-y-10");
+  const animateElements = document.querySelectorAll("section > div, .portfolio-item, .testimonial-card, #skills-container > div");
+  animateElements.forEach((el, index) => {
+    el.classList.add("transition-all", "duration-700", "ease-out", "opacity-0", "translate-y-10", "scale-95");
+    // Optional: Add staggered delay via inline style if it's a list
+    // el.style.transitionDelay = `${(index % 3) * 100}ms`; 
     observer.observe(el);
   });
 
