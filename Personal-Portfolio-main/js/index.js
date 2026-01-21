@@ -685,7 +685,7 @@ function initInteractions() {
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const closeMobileMenuBtn = document.getElementById("close-mobile-menu");
   const mobileMenu = document.getElementById("mobile-menu");
-  const mobileMenuContent = mobileMenu?.querySelector("div");
+  const mobileMenuContent = document.getElementById("mobile-menu-container"); // Updated to use ID directly
   const mobileLinks = document.querySelectorAll(".mobile-link");
 
   function openMenu() {
@@ -703,8 +703,11 @@ function initInteractions() {
   mobileMenuBtn?.addEventListener("click", openMenu);
   closeMobileMenuBtn?.addEventListener("click", closeMenu);
 
+  // Close menu when clicking outside the container
   mobileMenu?.addEventListener("click", (e) => {
-    if (e.target === mobileMenu) closeMenu();
+    if (e.target === mobileMenu) {
+      closeMenu();
+    }
   });
 
   mobileLinks.forEach(link => {

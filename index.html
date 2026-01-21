@@ -42,29 +42,16 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-brands-400.woff2"
     as="font" type="font/woff2" crossorigin />
 
-  <!-- Font Awesome CSS - Non-render-blocking -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style"
-    onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      " crossorigin="anonymous" />
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      crossorigin="anonymous" />
-  </noscript>
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
 
-  <!-- Google Fonts - Non-render-blocking -->
-  <link rel="preload"
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
     href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-    as="style" onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      " />
-  <noscript>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-      rel="stylesheet" />
-  </noscript>
+    rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Personal-Portfolio-main/imgs/favicon.png" />
@@ -96,101 +83,112 @@
   <nav id="header" role="navigation" aria-label="التنقل الرئيسي"
     class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
     <div class="container mx-auto px-4 md:px-8 py-5 flex justify-between items-center">
-      <div class="flex items-center gap-3">
+      <!-- 1. Logo Section -->
+      <div class="flex items-center gap-3 shrink-0">
         <div class="w-12 h-12 bg-linear-to-br from-primary to-secondary rounded-lg flex items-center justify-center"
           aria-hidden="true">
           <i class="fa-solid fa-code text-white text-xl"></i>
         </div>
-        <div class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <div
+          class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent hidden sm:block">
           احمد الشيخ
         </div>
       </div>
-      <!-- Desktop Nav -->
-      <div class="hidden md:flex gap-8 items-center" role="menubar">
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg font-medium"
-          href="#hero-section" role="menuitem" data-i18n="nav_home">الرئيسية</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg font-medium"
-          href="#about" role="menuitem" data-i18n="nav_about">عني</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg font-medium"
-          href="#portfolio" role="menuitem" data-i18n="nav_portfolio">الأعمال</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg font-medium"
-          href="#testimonials" role="menuitem" data-i18n="nav_testimonials">التوصيات</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg font-medium"
-          href="#contact" role="menuitem" data-i18n="nav_contact">تواصل</a>
 
-        <!-- Language Switcher & Theme Toggle -->
-        <div class="hidden md:flex gap-4 items-center">
+      <!-- 2. Desktop Navigation (Centered) -->
+      <div class="hidden md:flex gap-6 lg:gap-8 items-center justify-center flex-1 mx-4" role="menubar">
+        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-base lg:text-lg font-medium whitespace-nowrap"
+          href="#hero-section" role="menuitem" data-i18n="nav_home">الرئيسية</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-base lg:text-lg font-medium whitespace-nowrap"
+          href="#about" role="menuitem" data-i18n="nav_about">عني</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-base lg:text-lg font-medium whitespace-nowrap"
+          href="#portfolio" role="menuitem" data-i18n="nav_portfolio">الأعمال</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-base lg:text-lg font-medium whitespace-nowrap"
+          href="#testimonials" role="menuitem" data-i18n="nav_testimonials">التوصيات</a>
+        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-base lg:text-lg font-medium whitespace-nowrap"
+          href="#contact" role="menuitem" data-i18n="nav_contact">تواصل</a>
+      </div>
+
+      <!-- 3. Actions Section (Language + Theme + Mobile Menu) -->
+      <div class="flex items-center gap-3 shrink-0">
+
+        <!-- Controls Group -->
+        <div class="flex items-center gap-3 md:gap-4">
           <!-- Language Switcher -->
           <button id="desktop-lang-toggle"
             class="px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700 font-bold text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             aria-label="Switch Language">
-            <span class="font-cairo" style="display: none;">عربي</span>
-            <span class="font-sans">EN</span>
+            <span class="font-cairo leading-none pt-1" style="display: none;">عربي</span>
+            <span class="font-sans leading-none pt-0.5">EN</span>
           </button>
 
-          <!-- Theme Toggle Button (Desktop) -->
+          <!-- Theme Toggle Button -->
           <button id="theme-toggle-button"
             class="relative w-16 h-8 bg-slate-200 dark:bg-slate-700 rounded-full transition-all duration-300 hover:ring-2 hover:ring-primary/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            aria-label="تبديل الوضع الداكن" aria-pressed="false" type="button">
+            style="min-width: 56px;" aria-label="تبديل الوضع الداكن" aria-pressed="false" type="button">
+            <!-- Circle -->
             <span
               class="theme-toggle-circle absolute top-1 left-1 w-6 h-6 bg-white dark:bg-slate-800 rounded-full shadow-md flex items-center justify-center transition-transform duration-300 dark:translate-x-8">
-              <i class="fa-solid fa-sun text-amber-500 text-sm transition-all duration-300 dark:opacity-0 dark:rotate-90 dark:scale-0"
+              <i class="fa-solid fa-sun text-amber-500 text-[10px] md:text-xs transition-all duration-300 dark:opacity-0 dark:rotate-90 dark:scale-0"
                 aria-hidden="true"></i>
-              <i class="fa-solid fa-moon text-indigo-400 text-sm absolute transition-all duration-300 opacity-0 -rotate-90 scale-0 dark:opacity-100 dark:rotate-0 dark:scale-100"
+              <i class="fa-solid fa-moon text-indigo-400 text-[10px] md:text-xs absolute transition-all duration-300 opacity-0 -rotate-90 scale-0 dark:opacity-100 dark:rotate-0 dark:scale-100"
                 aria-hidden="true"></i>
             </span>
           </button>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700 dark:text-white focus:outline-none"
+        <!-- Mobile Menu Button (Grouped here for correct RTL/LTR placement) -->
+        <button id="mobile-menu-btn"
+          class="md:hidden flex items-center justify-center w-10 h-10 text-2xl text-slate-700 dark:text-white focus:outline-none ml-2 shrink-0"
           aria-label="القائمة">
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <!-- Mobile Nav Overlay -->
-        <div id="mobile-menu"
-          class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm opacity-0 invisible transition-all duration-300"
-          aria-hidden="true">
-          <div
-            class="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6">
-            <div class="flex justify-between items-center mb-8">
-              <h3 class="text-xl font-bold text-slate-800 dark:text-white">القائمة</h3>
-              <button id="close-mobile-menu" class="text-slate-500 hover:text-red-500 transition-colors">
-                <i class="fa-solid fa-xmark text-2xl"></i>
-              </button>
-            </div>
-            <div class="flex flex-col gap-6">
-              <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
-                href="#hero-section" data-i18n="nav_home">الرئيسية</a>
-              <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
-                href="#about" data-i18n="nav_about">عني</a>
-              <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
-                href="#portfolio" data-i18n="nav_portfolio">الأعمال</a>
-              <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
-                href="#testimonials" data-i18n="nav_testimonials">التوصيات</a>
-              <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
-                href="#contact" data-i18n="nav_contact">تواصل معي</a>
-            </div>
+      </div>
 
-            <!-- Mobile Theme Toggle & Lang -->
-            <div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
-              <button id="mobile-lang-toggle"
-                class="text-slate-600 dark:text-slate-300 font-bold border border-slate-300 dark:border-slate-600 px-3 py-1 rounded-lg">
-                EN
-              </button>
-              <button id="mobile-theme-toggle"
-                class="relative w-14 h-7 bg-slate-200 dark:bg-slate-700 rounded-full transition-colors">
-                <span
-                  class="absolute top-1 left-1 w-5 h-5 bg-white dark:bg-slate-800 rounded-full shadow-sm transition-transform duration-300 dark:translate-x-7 flex items-center justify-center">
-                  <i class="fa-solid fa-sun text-xs text-amber-500 dark:hidden"></i>
-                  <i class="fa-solid fa-moon text-xs text-indigo-400 hidden dark:block"></i>
-                </span>
-              </button>
-            </div>
+      <!-- Mobile Nav Overlay -->
+      <div id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-slate-900/50 backdrop-blur-sm opacity-0 invisible transition-all duration-300"
+        aria-hidden="true">
+        <div id="mobile-menu-container"
+          class="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6">
+          <div class="flex justify-between items-center mb-8">
+            <h3 class="text-xl font-bold text-slate-800 dark:text-white">القائمة</h3>
+            <button id="close-mobile-menu" class="text-slate-500 hover:text-red-500 transition-colors">
+              <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+          </div>
+          <div class="flex flex-col gap-6">
+            <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
+              href="#hero-section" data-i18n="nav_home">الرئيسية</a>
+            <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
+              href="#about" data-i18n="nav_about">عني</a>
+            <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
+              href="#portfolio" data-i18n="nav_portfolio">الأعمال</a>
+            <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
+              href="#testimonials" data-i18n="nav_testimonials">التوصيات</a>
+            <a class="mobile-link text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors"
+              href="#contact" data-i18n="nav_contact">تواصل معي</a>
+          </div>
+
+          <!-- Mobile Theme Toggle & Lang -->
+          <div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+            <button id="mobile-lang-toggle"
+              class="text-slate-600 dark:text-slate-300 font-bold border border-slate-300 dark:border-slate-600 px-3 py-1 rounded-lg">
+              EN
+            </button>
+            <button id="mobile-theme-toggle"
+              class="relative w-14 h-7 bg-slate-200 dark:bg-slate-700 rounded-full transition-colors">
+              <span
+                class="absolute top-1 left-1 w-5 h-5 bg-white dark:bg-slate-800 rounded-full shadow-sm transition-transform duration-300 dark:translate-x-7 flex items-center justify-center">
+                <i class="fa-solid fa-sun text-xs text-amber-500 dark:hidden"></i>
+                <i class="fa-solid fa-moon text-xs text-indigo-400 hidden dark:block"></i>
+              </span>
+            </button>
           </div>
         </div>
       </div>
+    </div>
   </nav>
 
   <main id="main-content">
