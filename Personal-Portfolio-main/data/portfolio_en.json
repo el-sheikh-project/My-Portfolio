@@ -171,6 +171,37 @@
                 "HTML",
                 "CSS"
             ]
-        }
+        },
+    {
+      "id": "11",
+      "title": "Templaye 2",
+      "category": "landing",
+      "image": "Personal-Portfolio-main/imgs/superM.png",
+      "link": "https://el-sheikh-project.github.io/Templet-Task-2/",
+      "description": "Simple landing page template using HTML, CSS, and Bootstrap.",
+      "tools": [
+        "HTML",
+        "CSS"
+      ]
+    }
+    ,
+    {
+      "id": "11",
+      "title": "My Portfolio",
+      "category": "landing",
+      "image": "Personal-Portfolio-main/imgs/My Portfolio.png",
+      "link": "https://el-sheikh-project.github.io/My-Portfolio/",
+      "description": "My personal portfolio to professionally showcase skills, projects, and experience.",
+      "tools": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Bootstrap",
+        "Font Awesome",
+        "JSON",
+        "Git",
+        "Tlwind CSS"
+      ]
+    }
     ]
 }
